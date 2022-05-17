@@ -40,4 +40,16 @@ function buildTable(data) {
     });
 }
 
-    
+//def a new function to handle button clicks so D3 can react and filter table
+function handleClick() {
+    //def a variable to hold date data, filtered and unfiltered
+    let date = d3.select("#datetime").property("value");
+        // tells d3 to look for the datetime tag in the HTMl, select the first one
+        //grab the value info and hold it in the date variable
+
+    //set a default filter and save it to a new variable
+        //will be the original table data bc we want users to make their own search terms
+        //set to original data, so they can filter from there
+    let filteredData = tableData
+
+}
