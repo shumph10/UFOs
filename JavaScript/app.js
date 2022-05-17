@@ -11,7 +11,7 @@ function buildTable(data) {
     tbody.html("");
         //clears data by ref the table, point JS to the table in the HTML page
         //and replaces whats there with an empty string
-    }
+    
     //add the forEach function
     data.forEach((dataRow) => {
     //obj being ref for data imported.forEach to create a for loop \
@@ -38,5 +38,6 @@ function buildTable(data) {
         }
     );
     });
+}
 
     
