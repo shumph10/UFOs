@@ -52,4 +52,38 @@ function handleClick() {
         //set to original data, so they can filter from there
     let filteredData = tableData
 
+    //if statement to check if date filter has been applied, 
+    //if not return the default data
+        //if (a date is entered) {
+            //filter the default data to show only the date entered
+        //}
+    if (date) {
+        filteredData = filteredData.filter(row => rowdatetime === date);
+        //saying filter the tabledata to show only the rows where the date is 
+        //strictly equal to the filtered date created
+    };
+    //call the build table function - want to build it with the filtered data
+    //so use that variable as a parameter
+    //needs to be inside the handle click button bc only need this to happen
+    //if the table has been filtered (clicked)
+    //& bc the filteredData is a local var - can only be called in the funct
+
+    //Rebuild the table using the filtered data
+    //NOTE: if no date was entered then the filteredData will be the orig tableData
+    buildTable(filteredData);
 }
+
+//add code for D3 to listen for the event of the button click and let our above code
+    //know that a button click has occured, and to use the handleClick() function
+    //to address it
+d3.selectAll("#filter-btn").on("click", handleClick)
+    //selector string contains the id for the HTML tag well use to assign an 
+        // unique button ID element, directs code to the filter button
+        //telling D3 to execute our function when the button with the id is clicked
+
+//call the buildTable funct again with the original data to ensure the
+//table loads when the page is loaded, need the table there so people can see 
+//the filter button
+
+buildTable(tableData)
+
