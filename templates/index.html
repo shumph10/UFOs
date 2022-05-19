@@ -4,9 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UFO Finder</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+    <!--adds links to the bootstrap content delivery network and our stylesheet file--> 
 </head>
 <body>
+    <div class="wrapper">
+    <!--adds the wrapper class that adds groups elements 
+    and spec the styling in the stylesheet file-->
+        <!--build the navigation bar-->
+        <nav class="navbar navbar-expand-lg">
+        <!--navbar is spec to BS styling, tells want across top of page,
+        lg spec extra responsiveness - responds to screen size changes-->
+            <a class="navbar-brand" href="index.html">UFO Sightings</a>
+            <!--add functionality, reset the page after a filter has been applied
+            done by linking to the homepage rather than another part of same pg-->
+            <!--in an a tag bc its has a link in it - its an anchor ele for links-->
+            <!--adding brand - default styling, adding the title UFO sightings for now-->
+        </nav>
+    </div>
+    <div class="jumbotron">
+        <h1>The Truth Is Out There</h1>
+    </div>
+    <div class="container-fluid">
+    <!--create a container to use the grid system for import of article title and paragraph-->
+    <!--container-fluid makes the container and makes it dynamic to screen size changes-->
+        <div class="row">
+        <!--creates the row that will hold the title and para - makes sure theyre in one line-->
+            <!--addign columns for title and para-->
+            <div class="col-md-4">
+                <!--add the header for the article title chosen-->
+                <h3>UFO Sightings: Fact or Fancy? <small>Ufologists Weigh in</small></h3>
+                <!--small makes the subheader-->
+
+            </div>
+
+            <div class="col-md-8">
+                <!--add the paragraph chosen to display-->
+                <p>
+                    Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.<br><br>"The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"<br><br>Not everyone is ready to celebrate, however. Local CEO and vocal anti-alien activist V. Isualize reached out to our reporters to go on record as firmly opposed to any attempts to provide access to this data. "If there are aliens, they certainly would like to be left alone," she stated, before directing us to the Leave Aliens Alone (LAA) community engagement initiative she founded and funds.<br><br>So what do YOU think? Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? Dig through the data yourself, and let us know what you see.
+                </p>
+            </div>
+        </div>
     
+    <!--create a new container to hold the table info-->
+    <div class="container-fluid">
+        <div class="row">
+        <!--create a div for the filter and tables and spec # of columns-->
+        <div class="cold-md-3">
+        <!--build filter first, need specific HTML field - a form. then add a title w/ </p>-->
+            <form>
+                <p>Filter Search</p>
+                <!--need to add the filter btn so app can run, and a filter by date, do in an ul
+                add list-group as class for styling
+                add our 2 list ele to hold them-->
+                <ul class="list-group">
+                    <li class="list-group-item">
+                    <!--need to make the date input field and the label to prompt input-->
+                        <label for="date">Enter Date</label>
+                        <input type="text" placeholder="1/10/2010" id="datetime" />
+                        <!--id=datetime is what the JS code is looking for when the button is clicked-->
+                    </li>
+
+                    <li class="list-group-item">
+                    <!--add the button, make sure to use #filter-btn 
+                        bc thats what JS code is looking for-->
+                        <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                        <!--when the button is clickedc the input from li-1 is picked up by JS code and 
+                        applied to the filter-->
+                        <!--type=button tells browser by default the button does nothing -- 
+                        our JS code will overwrite the nothing to - like button waiting for instructions-->
+                        <!--class attribute adds BS styling, then named the button Filter Table-->
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <!--build the default table for JS code to fill based on the filtering-->
+        <div class="col-md-9">
+            <table class="table table-striped">
+            <!--container for table & table components, adds BS styling striped to have slight 
+            color variation to give variatiuon btwn rows of data-->
+                <thead>
+                <!--element that displays each column header-->
+                    <tr>
+                    <!--tag for table row, when other tags are nested within they are
+                    displayed as rows of info-->
+                        <th>Date</th>
+                        <!--header of each column, add one with each column name-->
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Shape</th>
+                        <th>Duration</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <!--container for the body of the table where the data will be displayed-->
+            </table>
+        </div>
+
+        </div>
+    </div>
+
+    </div>
 </body>
 </html>
