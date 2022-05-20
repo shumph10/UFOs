@@ -11,7 +11,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <!--adds links to the bootstrap content delivery network and our stylesheet file--> 
 </head>
 <body>
@@ -42,7 +42,6 @@
                 <!--add the header for the article title chosen-->
                 <h3>UFO Sightings: Fact or Fancy? <small>Ufologists Weigh in</small></h3>
                 <!--small makes the subheader-->
-
             </div>
 
             <div class="col-md-8">
@@ -52,18 +51,19 @@
                 </p>
             </div>
         </div>
-    
+    </div>
     <!--create a new container to hold the table info-->
     <div class="container-fluid">
         <div class="row">
         <!--create a div for the filter and tables and spec # of columns-->
-        <div class="cold-md-3">
+            <div class="col-md-3">
         <!--build filter first, need specific HTML field - a form. then add a title w/ </p>-->
-            <form>
-                <p>Filter Search</p>
-                <!--need to add the filter btn so app can run, and a filter by date, do in an ul
-                add list-group as class for styling
-                add our 2 list ele to hold them-->
+                <form>
+                    <p>Filter Search</p>
+                    <!--need to add the filter btn so app can run, and a filter by date, do in an ul
+                    add list-group as class for styling
+                    add our 2 list ele to hold them-->
+                </form>
                 <ul class="list-group">
                     <li class="list-group-item">
                     <!--need to make the date input field and the label to prompt input-->
@@ -83,36 +83,40 @@
                         <!--class attribute adds BS styling, then named the button Filter Table-->
                     </li>
                 </ul>
-            </form>
-        </div>
-        <!--build the default table for JS code to fill based on the filtering-->
-        <div class="col-md-9">
-            <table class="table table-striped">
-            <!--container for table & table components, adds BS styling striped to have slight 
-            color variation to give variatiuon btwn rows of data-->
-                <thead>
-                <!--element that displays each column header-->
-                    <tr>
-                    <!--tag for table row, when other tags are nested within they are
-                    displayed as rows of info-->
-                        <th>Date</th>
-                        <!--header of each column, add one with each column name-->
-                        <th>City</th>
-                        <th>State</th>
-                        <th>Country</th>
-                        <th>Shape</th>
-                        <th>Duration</th>
-                        <th>Comments</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                <!--container for the body of the table where the data will be displayed-->
-            </table>
-        </div>
+            </div>
 
+            <!--build the default table for JS code to fill based on the filtering-->
+            <div class="col-md-9">
+                <table class="table table-striped">
+                <!--container for table & table components, adds BS styling striped to have slight 
+                color variation to give variatiuon btwn rows of data-->
+                    <thead>
+                    <!--element that displays each column header-->
+                        <tr>
+                        <!--tag for table row, when other tags are nested within they are
+                        displayed as rows of info-->
+                            <th>Date</th>
+                            <!--header of each column, add one with each column name-->
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Country</th>
+                            <th>Shape</th>
+                            <th>Duration</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <!--container for the body of the table where the data will be displayed-->
+                </table>
+            </div>
         </div>
     </div>
-
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="../JavaScript/data.js"></script>
+    <script src="../JavaScript/app.js"></script>
 </body>
 </html>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="static/js/data.js"></script>
+<script src="static/js/app.js"></script> -->
+<!--adding script tags to link to D3, data file, and app file IN THAT ORDER-->
