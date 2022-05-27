@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <!--adds links to the bootstrap content delivery network and our stylesheet file--> 
 </head>
-<body>
+<body class="bg-dark text-white">
     <div class="wrapper">
     <!--adds the wrapper class that adds groups elements 
     and spec the styling in the stylesheet file-->
         <!--build the navigation bar-->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <!--navbar is spec to BS styling, tells want across top of page,
         lg spec extra responsiveness - responds to screen size changes-->
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
@@ -29,8 +29,8 @@
             <!--adding brand - default styling, adding the title UFO sightings for now-->
         </nav>
     </div>
-    <div class="jumbotron">
-        <h1>The Truth Is Out There</h1>
+    <div class="jumbotron"  style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80'); background-position: center; background-size: cover;">
+        <h1 class="display-4">The Truth Is Out There</h1>
     </div>
     <div class="container-fluid">
     <!--create a container to use the grid system for import of article title and paragraph-->
@@ -58,42 +58,42 @@
         <!--create a div for the filter and tables and spec # of columns-->
             <div class="col-md-3">
         <!--build filter first, need specific HTML field - a form. then add a title w/ </p>-->
-                <form>
+                <form class="bg-dark">
                     <p>Filter Search</p>
                     <!--need to add the filter btn so app can run, and a filter by date, do in an ul
                     add list-group as class for styling
                     add our 2 list ele to hold them-->
                 </form>
-                <ul class="list-group">
-                    <li class="list-group-item">
+                <ul class="bg-dark">
+                    <li class="bg-dark">
                     <!--need to make the date input field and the label to prompt input-->
                         <label for="date">Enter Date</label>
                         <input type="text" placeholder="1/10/2010" id="datetime" />
                         <!--id=datetime is what the JS code is looking for when the button is clicked-->
                     </li>
                     <!--create 4 list elements to hold the other filters-->
-                    <li class="list-group-item">
+                    <li class="bg-dark">
                         <!--need to make the date input field and the label to prompt input-->
                             <label for="city">Enter City</label>
-                            <input type="text" placeholder="roswell" id="city" />
+                            <input type="text" placeholder="roswell" id="city" class="form-control"/>
                             <!--id=datetime is what the JS code is looking for when the button is clicked-->
                     </li>
-                    <li class="list-group-item">
+                    <li class="bg-dark">
                         <!--need to make the date input field and the label to prompt input-->
                             <label for="state">Enter State</label>
-                            <input type="text" placeholder="ca" id="state" />
+                            <input type="text" placeholder="ca" id="state" class="form-control"/>
                             <!--id=datetime is what the JS code is looking for when the button is clicked-->
                     </li>
-                    <li class="list-group-item">
+                    <li class="bg-dark">
                         <!--need to make the date input field and the label to prompt input-->
                             <label for="country">Enter Country</label>
-                            <input type="text" placeholder="us" id="country" />
+                            <input type="text" placeholder="us" id="country" class="form-control"/>
                             <!--id=datetime is what the JS code is looking for when the button is clicked-->
                     </li>
-                    <li class="list-group-item">
+                    <li class="bg-dark">
                         <!--need to make the date input field and the label to prompt input-->
                             <label for="shape">Enter Shape</label>
-                            <input type="text" placeholder="circle" id="shape" />
+                            <input type="text" placeholder="circle" id="shape" class="form-control"/>
                             <!--id=datetime is what the JS code is looking for when the button is clicked-->
                     </li>
                     
@@ -138,8 +138,8 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-    <script src="../JavaScript/data.js"></script>
-    <script src="../JavaScript/app.js"></script>
+    <script src="../JS/data.js"></script>
+    <script src="../JS/app.js"></script>
 </body>
 </html>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>

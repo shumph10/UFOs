@@ -2,7 +2,7 @@
 const tableData = data;
 
 // get table references
-var tbody = d3.select("tbody");
+let tbody = d3.select("tbody");
 
 function buildTable(data) {
   // First, clear out any existing data
@@ -24,7 +24,10 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
-let filters = []
+let filters = {};
+  
+// 2. Attach an event to listen for changes to each filter
+d3.selectAll("input").on("change", updateFilters);
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
@@ -33,17 +36,19 @@ function updateFilters() {
     let selection = d3.select(this);
     // 4b. Save the value that was changed as a variable.
     let selectionValue = selection.property("value");
+    console.log(selectionValue);
     // 4c. Save the id of the filter that was changed as a variable.
-    let filterID = selection.attribute("id");
+    let filterID = selection.attr("id");
+    console.log(filterID);
   
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
-    if (filteredValue) {
-      filters[filterID] = filteredValue.push()
+    if (selectionValue) {
+      filters[filterID] = selectionValue;
     }
     else{
-      delete filters[filteredID]
-    };
+      delete filters[filterID];
+    }
   
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
@@ -57,14 +62,13 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    Object.entries(filters).forEach()
+    Object.entries(filters).forEach(([key, value]) => {
+      filteredData = filteredData.filter(row => row[key] === value);
+    });
   
     // 10. Finally, rebuild the table using the filtered data
-    
+    buildTable(filteredData)
   }
-  
-  // 2. Attach an event to listen for changes to each filter
-  
   
   // Build the table when the page loads
   buildTable(tableData);
