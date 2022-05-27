@@ -71,17 +71,43 @@
                         <input type="text" placeholder="1/10/2010" id="datetime" />
                         <!--id=datetime is what the JS code is looking for when the button is clicked-->
                     </li>
-
+                    <!--create 4 list elements to hold the other filters-->
                     <li class="list-group-item">
+                        <!--need to make the date input field and the label to prompt input-->
+                            <label for="city">Enter City</label>
+                            <input type="text" placeholder="roswell" id="city" />
+                            <!--id=datetime is what the JS code is looking for when the button is clicked-->
+                    </li>
+                    <li class="list-group-item">
+                        <!--need to make the date input field and the label to prompt input-->
+                            <label for="state">Enter State</label>
+                            <input type="text" placeholder="ca" id="state" />
+                            <!--id=datetime is what the JS code is looking for when the button is clicked-->
+                    </li>
+                    <li class="list-group-item">
+                        <!--need to make the date input field and the label to prompt input-->
+                            <label for="country">Enter Country</label>
+                            <input type="text" placeholder="us" id="country" />
+                            <!--id=datetime is what the JS code is looking for when the button is clicked-->
+                    </li>
+                    <li class="list-group-item">
+                        <!--need to make the date input field and the label to prompt input-->
+                            <label for="shape">Enter Shape</label>
+                            <input type="text" placeholder="circle" id="shape" />
+                            <!--id=datetime is what the JS code is looking for when the button is clicked-->
+                    </li>
+                    
+<!-- remove for mod challenge-->
+                    <!-- <li class="list-group-item">-->
                     <!--add the button, make sure to use #filter-btn 
                         bc thats what JS code is looking for-->
-                        <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                        <!-- <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button> -->
                         <!--when the button is clickedc the input from li-1 is picked up by JS code and 
                         applied to the filter-->
                         <!--type=button tells browser by default the button does nothing -- 
                         our JS code will overwrite the nothing to - like button waiting for instructions-->
                         <!--class attribute adds BS styling, then named the button Filter Table-->
-                    </li>
+                    <!-- </li>  -->
                 </ul>
             </div>
 
