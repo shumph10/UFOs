@@ -15,3 +15,7 @@ Enter desired search requirements in their respective field and click off of the
 
 ##**Summary**
 One drawback to this design was removing the filter button. If you do not know to click off the table you could just sit there waiting for the table to change after entering a filter. Also reloading the page after each individual filter entry is not typically what I see from major brands or websites when filtering, such as on Amazon. Therefore, allowing users to input all desired filters then click an obvious button to load the filtered data in would be the best in my opinion. 
+
+
+##**Contact:**
+- sarahhumphrey2016@outlook.com
